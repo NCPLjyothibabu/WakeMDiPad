@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CMg-9P-9JO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Full Catalog-->
+        <scene sceneID="C1n-Pm-J68">
+            <objects>
+                <viewController id="hWF-7L-c4Y" customClass="FullCatalog" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="29j-WZ-RtY"/>
+                        <viewControllerLayoutGuide type="bottom" id="lY3-q3-On6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xua-PQ-x5B">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CCa-Ue-1za">
+                                <rect key="frame" x="0.0" y="37" width="361" height="685"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FCCell" rowHeight="134" id="hbh-Vl-0aV" customClass="MyLibCell">
+                                        <rect key="frame" x="0.0" y="28" width="361" height="134"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbh-Vl-0aV" id="NjL-7b-nQC">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_deselected list item bg.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_selected list item bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-v2-vnZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shaun.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZSd-GV-UmC">
+                                                    <rect key="frame" x="12" y="19" width="100" height="100"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png" highlightedImage="004 2732x2048_WakeMDiPad_Mycatalog_arrow 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="xS8-Du-sqF">
+                                                    <rect key="frame" x="319" y="80" width="30" height="30"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXc-UU-O0T">
+                                                    <rect key="frame" x="125" y="21" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Pak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0t-vp-zMy">
+                                                    <rect key="frame" x="125" y="45" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-mf-uBY">
+                                                    <rect key="frame" x="125" y="93" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPx-n8-wON">
+                                                    <rect key="frame" x="125" y="69" width="186" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Duration" destination="chk-mf-uBY" id="wJ3-pL-8Ir"/>
+                                            <outlet property="Image" destination="ZSd-GV-UmC" id="slc-2d-4f9"/>
+                                            <outlet property="arrowImg" destination="xS8-Du-sqF" id="dZ7-2t-yL3"/>
+                                            <outlet property="lessons" destination="jPx-n8-wON" id="CzD-p4-SDa"/>
+                                            <outlet property="pakName" destination="X0t-vp-zMy" id="cDA-uG-Hlu"/>
+                                            <outlet property="title" destination="EXc-UU-O0T" id="Utv-Vf-FWs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hWF-7L-c4Y" id="hK9-PL-LJj"/>
+                                    <outlet property="delegate" destination="hWF-7L-c4Y" id="ZKX-8y-23s"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1f-Az-Gu1">
+                                <rect key="frame" x="314" y="28" width="395" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IA1-Ag-fqq">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfd-eT-zeo">
+                                <rect key="frame" x="13" y="25" width="30" height="30"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_navbar_sharebtn.png"/>
+                                <connections>
+                                    <action selector="SocialShare:" destination="hWF-7L-c4Y" eventType="touchUpInside" id="doq-Q1-aOQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crV-06-gGR">
+                                <rect key="frame" x="975" y="25" width="30" height="30"/>
+                                <state key="normal" backgroundImage="004 2732x2048_WakeMDiPad_Mycatalog_navbar_refresh btn.png"/>
+                                <connections>
+                                    <action selector="restore:" destination="hWF-7L-c4Y" eventType="touchUpInside" id="Hfp-aQ-9Ig"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_videotop title bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="bjx-jh-qnW">
+                                <rect key="frame" x="5" y="724" width="504" height="44"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_selected list item bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="r7X-dc-V1g">
+                                <rect key="frame" x="518" y="724" width="504" height="44"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Catalog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-n4-39n">
+                                <rect key="frame" x="322" y="28" width="339" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_selected list item bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="P21-r2-Aau">
+                                <rect key="frame" x="361" y="60" width="663" height="191"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_vertical split line.png" translatesAutoresizingMaskIntoConstraints="NO" id="lKU-Vw-9fk">
+                                <rect key="frame" x="360" y="60" width="2" height="662"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG6-7o-g8n">
+                                <rect key="frame" x="377" y="78" width="158" height="158"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6W-aU-FX5">
+                                <rect key="frame" x="559" y="86" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pak name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1q-os-NaB">
+                                <rect key="frame" x="559" y="115" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1r-tt-rTO">
+                                <rect key="frame" x="559" y="163" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dueration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-a2-3eA">
+                                <rect key="frame" x="559" y="200" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTc-rU-6Mh">
+                                <rect key="frame" x="870" y="190" width="127" height="26"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <state key="normal" backgroundImage="004 2732x2048_WakeMDiPad_Mycatalog_price tag.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadOrPurchase:" destination="hWF-7L-c4Y" eventType="touchUpInside" id="ofa-j3-exl"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-0n-GuF">
+                                <rect key="frame" x="361" y="251" width="661" height="339"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="FbJ-aF-57r" customClass="DetailsCell">
+                                        <rect key="frame" x="0.0" y="28" width="661" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FbJ-aF-57r" id="oPf-MJ-SCQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="661" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog video list icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-bs-Sxs">
+                                                    <rect key="frame" x="33" y="10" width="42" height="48"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUm-Op-s6e">
+                                                    <rect key="frame" x="110" y="10" width="424" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig7-WO-dIb">
+                                                    <rect key="frame" x="110" y="37" width="373" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-1I-WOI">
+                                                    <rect key="frame" x="588" y="15" width="37" height="38"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="VidDue" destination="ig7-WO-dIb" id="sx6-vZ-7FA"/>
+                                            <outlet property="VidName" destination="OUm-Op-s6e" id="vff-Zu-u7C"/>
+                                            <outlet property="vidImg" destination="Cdh-1I-WOI" id="cF8-6T-QEj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hWF-7L-c4Y" id="mOL-DC-Dt6"/>
+                                    <outlet property="delegate" destination="hWF-7L-c4Y" id="wNj-2B-FSl"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_Shaunsaysblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="D08-aw-1dW">
+                                <rect key="frame" x="361" y="592" width="663" height="127"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" contentMode="center" fixedFrame="YES" keyboardDismissMode="interactive" editable="NO" text="test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-U8-XuG">
+                                <rect key="frame" x="547" y="598" width="465" height="113"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-RQ-boZ">
+                                <rect key="frame" x="13" y="724" width="433" height="41"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_bb_Mylibrary off.png"/>
+                                <connections>
+                                    <action selector="MyLIbBtn:" destination="hWF-7L-c4Y" eventType="touchUpInside" id="PYW-NM-89Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-dN-tNR">
+                                <rect key="frame" x="518" y="723" width="486" height="41"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_bb_Fullcatalog on.png"/>
+                                <connections>
+                                    <action selector="FullCatBtn:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="CMh-ES-eqF"/>
+                                    <action selector="FullCatBtn:" destination="hWF-7L-c4Y" eventType="touchUpInside" id="p2l-YB-vzu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0b-ju-eyc">
+                                <rect key="frame" x="884" y="221" width="98" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dxI-WY-IQf"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="DetailsTableView" destination="N2w-0n-GuF" id="cId-1S-U5T"/>
+                        <outlet property="FullCatTableView" destination="CCa-Ue-1za" id="99u-vc-V55"/>
+                        <outlet property="ImagePak" destination="BG6-7o-g8n" id="YTm-Gf-toN"/>
+                        <outlet property="PakLable" destination="J1q-os-NaB" id="hnV-dM-PYW"/>
+                        <outlet property="downBtn" destination="kTc-rU-6Mh" id="CaP-nj-N1o"/>
+                        <outlet property="duerationLable" destination="VAj-a2-3eA" id="P5h-rG-Tsn"/>
+                        <outlet property="lessonsLable" destination="d1r-tt-rTO" id="S0Z-hs-lAm"/>
+                        <outlet property="priceLable" destination="b0b-ju-eyc" id="vZe-1E-DGG"/>
+                        <outlet property="shawnSaystext" destination="XFG-U8-XuG" id="ynd-55-hCf"/>
+                        <outlet property="titlePak" destination="X6W-aU-FX5" id="fYT-zz-rOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaS-xp-LtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="649"/>
+        </scene>
+        <!--My Library-->
+        <scene sceneID="TF7-jY-ssF">
+            <objects>
+                <viewController id="gL0-Ic-ucU" customClass="MyLibrary" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fgv-nN-GpR"/>
+                        <viewControllerLayoutGuide type="bottom" id="PbE-Os-W5n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VeY-kn-pqw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EyX-U2-0Cy">
+                                <rect key="frame" x="0.0" y="17" width="1024" height="40"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RFA-t5-Px8">
+                                <rect key="frame" x="0.0" y="57" width="361" height="662"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="134" id="fgL-Ay-bH0" customClass="MyLibCell">
+                                        <rect key="frame" x="0.0" y="28" width="361" height="134"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fgL-Ay-bH0" id="4l1-Es-ZTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_deselected list item bg.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_selected list item bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="eJf-eA-kXl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shaun.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9y-9p-yhu">
+                                                    <rect key="frame" x="12" y="19" width="100" height="100"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png" highlightedImage="004 2732x2048_WakeMDiPad_Mycatalog_arrow 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zgj-mB-2Dg">
+                                                    <rect key="frame" x="319" y="80" width="30" height="30"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-fS-Iz3">
+                                                    <rect key="frame" x="125" y="21" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Pak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBo-tg-eWu">
+                                                    <rect key="frame" x="125" y="45" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH0-HH-KdD">
+                                                    <rect key="frame" x="125" y="93" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAv-f3-Zj0">
+                                                    <rect key="frame" x="125" y="69" width="186" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Duration" destination="qH0-HH-KdD" id="uxG-ez-Ze5"/>
+                                            <outlet property="Image" destination="B9y-9p-yhu" id="tIQ-60-3EW"/>
+                                            <outlet property="arrowImg" destination="Zgj-mB-2Dg" id="32O-tO-1Op"/>
+                                            <outlet property="lessons" destination="jAv-f3-Zj0" id="OFb-wK-bEB"/>
+                                            <outlet property="pakName" destination="gBo-tg-eWu" id="8ru-6Y-cwp"/>
+                                            <outlet property="title" destination="pHr-fS-Iz3" id="yF9-7N-mHH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gL0-Ic-ucU" id="V40-hL-BXI"/>
+                                    <outlet property="delegate" destination="gL0-Ic-ucU" id="V74-ws-uLQ"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_selected list item bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="R33-2t-I8J">
+                                <rect key="frame" x="0.0" y="722" width="509" height="44"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3Q-T0-Suh">
+                                <rect key="frame" x="13" y="723" width="433" height="41"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_bb_Mylibrary on.png"/>
+                                <connections>
+                                    <action selector="TabMLibBtn:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="z8l-19-j9G"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_vertical split line.png" translatesAutoresizingMaskIntoConstraints="NO" id="enX-bg-WLX">
+                                <rect key="frame" x="360" y="57" width="2" height="662"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_Video top title bar icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1fn-ZE-85e">
+                                <rect key="frame" x="390" y="73" width="40" height="42"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-8I-J5t">
+                                <rect key="frame" x="462" y="83" width="395" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dueration : 00:00:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-p8-JfS">
+                                <rect key="frame" x="853" y="83" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-dP-2f5">
+                                <rect key="frame" x="314" y="25" width="395" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_videotop title bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-Oe-Rcy">
+                                <rect key="frame" x="518" y="723" width="504" height="44"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-7d-8Cm">
+                                <rect key="frame" x="518" y="726" width="486" height="41"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_bb_Fullcatalog off.png"/>
+                                <connections>
+                                    <action selector="FullCatBtn:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="xi2-9q-v0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0O-zx-hR7">
+                                <rect key="frame" x="637" y="565" width="130" height="130"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_video_play btn.png"/>
+                                <connections>
+                                    <action selector="PlayPause:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="1Mc-ce-iea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvM-Jg-vWk">
+                                <rect key="frame" x="803" y="607" width="60" height="46"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_video_forward off.png"/>
+                                <connections>
+                                    <action selector="forward:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="OXZ-qI-7IC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLe-E8-JU1">
+                                <rect key="frame" x="921" y="605" width="60" height="46"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_video_next off.png"/>
+                                <connections>
+                                    <action selector="nextVideo:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="Hy5-ZJ-dAb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-Bf-kXj">
+                                <rect key="frame" x="543" y="607" width="60" height="46"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_video_backward off.png"/>
+                                <connections>
+                                    <action selector="backward:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="NBl-NT-MSU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub5-jd-8iE">
+                                <rect key="frame" x="411" y="605" width="60" height="46"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_video_back off.png"/>
+                                <connections>
+                                    <action selector="PervVideo:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="wwC-Cu-ymA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJF-Vz-cYE">
+                                <rect key="frame" x="975" y="22" width="30" height="30"/>
+                                <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_navbar_settings.png"/>
+                                <connections>
+                                    <action selector="settings:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="UeW-s7-pp8"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BPl-Rj-9Mz">
+                                <rect key="frame" x="362" y="123" width="661" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="geA-EU-6d2" customClass="DetailsCell">
+                                        <rect key="frame" x="0.0" y="28" width="661" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geA-EU-6d2" id="V6E-Nk-l4w">
+                                            <rect key="frame" x="0.0" y="0.0" width="661" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog video list icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="aPT-1U-pgK">
+                                                    <rect key="frame" x="33" y="10" width="42" height="48"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s55-Rc-H9k">
+                                                    <rect key="frame" x="110" y="10" width="424" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-RU-9Ph">
+                                                    <rect key="frame" x="110" y="37" width="373" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-jJ-hmI">
+                                                    <rect key="frame" x="588" y="15" width="37" height="38"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="VidDue" destination="JJ6-RU-9Ph" id="Uo2-s2-PH3"/>
+                                            <outlet property="VidName" destination="s55-Rc-H9k" id="ZgN-W0-M2H"/>
+                                            <outlet property="vidImg" destination="xdh-jJ-hmI" id="SsY-mB-gRz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gL0-Ic-ucU" id="1K4-PW-So3"/>
+                                    <outlet property="delegate" destination="gL0-Ic-ucU" id="bQP-SQ-4Il"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mev-rE-Yke">
+                                <rect key="frame" x="362" y="57" width="662" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THIS PAK CONTAINS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHA-Dg-Peu">
+                                        <rect key="frame" x="213" y="24" width="260" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vyz-Cu-DNM">
+                                <rect key="frame" x="0.0" y="17" width="1024" height="751"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqO-4A-OxI">
+                                        <rect key="frame" x="0.0" y="8" width="1024" height="40"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPI-0Y-B3u">
+                                        <rect key="frame" x="314" y="15" width="395" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uL4-1j-rci">
+                                        <rect key="frame" x="14" y="14" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="006 2732x2048_WakeMDiPad_Mycatalog_Videoplayer_navbar_backbtn.png"/>
+                                        <connections>
+                                            <action selector="VideoBackBtn:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="phM-NL-XxU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYL-Ai-DCZ">
+                                        <rect key="frame" x="975" y="15" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="002 2732x2048_WakeMDiPad_MyLibrary_navbar_sharebtn.png"/>
+                                        <connections>
+                                            <action selector="socialShare:" destination="gL0-Ic-ucU" eventType="touchUpInside" id="dAc-sx-DLH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="APo-iL-rfb"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="DetailsTableView" destination="BPl-Rj-9Mz" id="v2k-X3-8B1"/>
+                        <outlet property="DurationLable" destination="GFZ-p8-JfS" id="NMO-1F-sGU"/>
+                        <outlet property="TitleLable" destination="NW7-8I-J5t" id="Jo7-rz-p2Z"/>
+                        <outlet property="VideoPlayNamelab" destination="fPI-0Y-B3u" id="hXP-L5-VHA"/>
+                        <outlet property="VideoPlayerView" destination="Vyz-Cu-DNM" id="GuE-aR-dGf"/>
+                        <outlet property="myLibTableView" destination="RFA-t5-Px8" id="vdW-PZ-jaT"/>
+                        <outlet property="playBtn" destination="P0O-zx-hR7" id="O2A-D4-cbO"/>
+                        <segue destination="kIF-uc-Zz4" kind="push" identifier="Details" id="Zcd-MT-n0L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXg-zk-5ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-281"/>
+        </scene>
+        <!--Tabbarcontroller-->
+        <scene sceneID="1v5-dk-A7y">
+            <objects>
+                <tabBarController hidesBottomBarWhenPushed="YES" id="CMg-9P-9JO" customClass="Tabbarcontroller" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nxE-3l-Nz0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="64O-ui-dcw" kind="relationship" relationship="viewControllers" id="vKs-Qt-HvV"/>
+                        <segue destination="IQ2-8F-V3b" kind="relationship" relationship="viewControllers" id="EEJ-3Q-LSb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cK3-Hu-SdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-905" y="37"/>
+        </scene>
+        <!--Settingsviewcontroller-->
+        <scene sceneID="yMr-ol-ieG">
+            <objects>
+                <viewController id="kIF-uc-Zz4" customClass="Settingsviewcontroller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EYD-cW-leY"/>
+                        <viewControllerLayoutGuide type="bottom" id="v8R-RD-zzN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fLU-9h-YnI">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlightedImage="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPg-2c-alK">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHa-Bo-bUo">
+                                <rect key="frame" x="13" y="25" width="30" height="30"/>
+                                <state key="normal" backgroundImage="008 2732x2048_WakeMDiPad_TNC_navbar_homebtn.png"/>
+                                <connections>
+                                    <action selector="RootView:" destination="kIF-uc-Zz4" eventType="touchUpInside" id="L8q-zF-cUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdk-Ph-qCR">
+                                <rect key="frame" x="975" y="25" width="30" height="30"/>
+                                <state key="normal" backgroundImage="008 2732x2048_WakeMDiPad_TNC_navbar_sharebtn.png"/>
+                                <connections>
+                                    <action selector="Shareus:" destination="kIF-uc-Zz4" eventType="touchUpInside" id="YJc-Dy-eQK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-TX-IT4">
+                                <rect key="frame" x="322" y="28" width="339" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo7-RY-b50">
+                                <rect key="frame" x="5" y="64" width="322" height="50"/>
+                                <state key="normal" backgroundImage="007 2732x2048_WakeMDiPad_HTU_htu_tab_btn on.png"/>
+                                <connections>
+                                    <action selector="howtouseaction:" destination="kIF-uc-Zz4" eventType="touchUpInside" id="OnN-qw-TNT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJp-CD-pTP">
+                                <rect key="frame" x="331" y="65" width="335" height="50"/>
+                                <state key="normal" backgroundImage="007 2732x2048_WakeMDiPad_HTU_tnc_tab_btn off.png"/>
+                                <connections>
+                                    <action selector="termsaction:" destination="kIF-uc-Zz4" eventType="touchUpInside" id="yjx-Px-NCM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76h-zu-zid">
+                                <rect key="frame" x="669" y="65" width="350" height="50"/>
+                                <state key="normal" backgroundImage="007 2732x2048_WakeMDiPad_HTU_abwnd_tab_btn off.png"/>
+                                <connections>
+                                    <action selector="aboutwakemdbut:" destination="kIF-uc-Zz4" eventType="touchUpInside" id="6jo-cO-8lP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="007 2732x2048_WakeMDiPad_HTU_toptabsbottomline.png" translatesAutoresizingMaskIntoConstraints="NO" id="fLC-a9-Cu2">
+                                <rect key="frame" x="0.0" y="113" width="1024" height="4"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-Bh-jJu">
+                                <rect key="frame" x="0.0" y="117" width="1024" height="649"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.13 Productions Disclaimer for Wake-MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-PA-hIb">
+                                        <rect key="frame" x="187" y="24" width="651" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7kC-bl-7a1">
+                                        <rect key="frame" x="57" y="63" width="880" height="538"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">
+BY USING THIS APP YOU AGREE TO THE FOLLOWING CONDITIONS AND TERMS:
+ANYONE ACCESSING THIS APP, THE WAKE-MD™ APPLICATION (“THE APP”) AGREES TO ABIDE BY THE DISCLAIMERS AND THE TERMS OF USE GOVERNING USE OF THE APPLICATION.
+
+Terms of Use:
+
+These Terms of Use ("Terms") govern the use of the WAKE-MD™ (SOMETIMES “WAKEMD” OR “WAKE MD”) Application (the “App”) developed by 3:13 Productions (the ”Company”, "We" or "Us”). Anyone accessing this App (Referred to as “You” OR “Your”) hereby agrees to abide by these terms. These Terms may be modified at any time, and such modification shall be effective immediately upon posting on the App. Your continued access or use of the App after the modifications have become effective shall be deemed your conclusive acceptance of the modified Terms.
+
+1.	LICENSE.  The contents of the App, including its "look and feel" (e.g., text, graphics, images, logos, and button icons), branding, concept, design, editorial content, notices, software (including HTML or XML-based computer programs) and other material, are protected under both United States and foreign copyright, trademark, and other laws. We hereby grant you the limited right to view and use our App subject to these Terms. You may download or print a copy of information provided in the App for personal use only. Permission to reprint or electronically reproduce any document or graphic in whole or in part for any other purpose is expressly prohibited, unless prior written consent is obtained from Us. Apple, iPhone, iPad, iPod Touch and related trademarks, names, and logos are the property of Apple Inc. and are registered and/or used in the United States as well as many countries around the world.
+
+2. 	YOUR RESPONSIBILITY. You assume all responsibility for your use of, or access to, this App, including your access to any of the Company literature obtained from the App, and hereby expressly waive all claims or causes of action against the Company, its officers, directors, employees, agents and affiliates in connection therewith.  Additionally WAKEBOARDING can be a dangerous sport resulting in serious injury and death (just read the warning labels that usually accompany a standard wakeboard, wakeboard rope or new boat operations manual)! You should NEVER try anything you are not comfortable with. You need to follow good judgment, have un-damaged gear, a competent driver, a safe place to ride, good conditions and know your own limits. You hereby expressly waive all claims and causes of action against the Company, its officers, directors, employees, agents and affiliates in connection with viewing our lessons and using the advice in the lessons.
+
+3. 	GENERAL DISCLAIMER. 
+
+A.	The limitations, exclusions, and disclaimers herein shall apply irrespective of the nature of any cause of action, or action by the user including but not limited to breach of contract, negligence, tort, strict liability or any other legal theory.  The Company makes no representations, endorsements, guarantees or warranties, express or implied, with respect to whether the App will be effective for any person’s use. 
+
+B.	The App is provided for use "as is" and you assume any and all risks related to your use of the App. The Company makes no representations that this App and any information set forth herein or therein, or any website with which it is linked, is accurate, complete, or current. In no event shall the Company or its employees, agents, suppliers or contractors be liable for any damages of any kind or character, including without limitation, any compensatory, incidental, direct, indirect, special, punitive, or consequential damages, loss of use, loss of data, loss of income or profit, loss of or damage to property, harm to the user’s person, claims of third parties, or other losses of any kind or character, even if the Company has been advised of the possibility of such damages or losses arising out of or in connection with the use of the App, the Company’s website or any website with which it is linked in contract, negligence, strict liability or otherwise.
+
+C.	We hereby disclaim any warranty that the information on the App will be free from interruption, or that the site is free of viruses, worms, Trojan Horses or other code that manifest contaminating or destructive properties.  Changes are periodically made to the information herein: These changes will be incorporated in new editions of the App, however, the Company makes no commitment to provide any such changes, updates, enhancements, or other additions to this documentation to you in a timely manner or at all. 
+
+4. 	ADDITIONAL PRODUCTS and SERVICES DISCLAIMER. The Company may make available certain descriptions of products and services on the App. The Company does not represent or warrant that any particular product or service will conform to those descriptions. Any product or service is governed specifically and exclusively by the agreement entered into by the parties for that product or service. This paragraph 4 is in addition to and not in place of the disclaimers set forth in paragraph 3 above. 
+
+5. 	INDEMNITY. You agree to indemnify, defend and hold harmless the Company, its officers, directors, employees, agents and affiliates from and against all losses, expenses, damages and costs, including reasonable attorneys' fees, arising out of or relating to any violation of these Terms or any activity related to use of the App (including but not limited to infringement of third parties' intellectual property rights or negligent or wrongful conduct) by you or any other person accessing the App on your behalf. 
+
+6. 	APP IS FOR YOUR USE ONLY. You agree to take reasonable measures to ensure that no unauthorized person or entity shall have access to the App using your user name or password.  You agree that, if you are provided rights to access the App, those rights are non-transferable. You may not assign, sublicense, transfer, pledge, lease, rent, or share the user name and password to anyone other than an employee or agent authorized to act on your behalf, and subject to all of the provisions set forth in these Terms. You assume all responsibility for loss or misuse of your password and are responsible for any activities undertaken by a person in possession of your user name or password for any reason.
+
+7.	TRADEMARKS. The marks “Wake-MD” and “3:13 Productions” are trademarks of 3:13 Productions, A California LLC Company.
+
+8. 	COPYRIGHT NOTICE. 2012 Wake-MD™ - 3:13 Productions LLC.
+ 
+9. 	GOVERNING LAW AND FORUM. These Terms, and the interpretation, performance and enforcement of your and the Company' rights and duties, shall be construed in accordance with the laws of the State of California, notwithstanding the conflict or choice-of-law principles thereof. By using the App, you agree to submit any and all disputes arising out of or relating to these Terms to the exclusive jurisdiction of the state or federal courts located in Los Angeles County, California, or, at the Company' sole election, to binding arbitration before a single arbitrator pursuant to the American Arbitration Association's Commercial Dispute Resolution Procedures, with such arbitration to take place in Los Angeles, CA. 
+
+10. 	CONTACTING US. If you have any questions or concerns about these Terms, please contact us at: WakeMDTech@GMAIL.COM
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoZ-lE-qnq">
+                                <rect key="frame" x="0.0" y="119" width="1024" height="649"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="007 2732x2048_WakeMDiPad_HTU_right image.png" translatesAutoresizingMaskIntoConstraints="NO" id="lrZ-ch-Dpk">
+                                        <rect key="frame" x="465" y="0.0" width="559" height="649"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7z-I7-NSv">
+                                        <rect key="frame" x="21" y="13" width="269" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-j9-eMy">
+                                        <rect key="frame" x="14" y="60" width="437" height="574"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">   Start in the “Full Catalog” Section of the App. Purchase/Download the Paks that have the tricks you would like to learn. Once Downloaded, they will appear in the “My Library” section and you can view them as many times as you want...even if you do not have service on the boat!
+
+What is Resolution?
+
+You have three resolution choices: High, Medium and Low. High resolution is the best quality but takes up the most memory on your device. Low resolution is the lowest quality but takes up the lease space on your device. Medium is in the middle. Choose the one that is best for you.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-KR-Ytm">
+                                <rect key="frame" x="0.0" y="119" width="1024" height="649"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="009 2732x2048_WakeMDiPad_AbWMD_abwnd_backimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="mUQ-0V-mCG">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="649"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Executive Producer    :    Scott Leonard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-4a-CbS">
+                                        <rect key="frame" x="496" y="390" width="435" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-Fs-eMV">
+                                        <rect key="frame" x="496" y="422" width="435" height="21"/>
+                                        <string key="text">Produced By  	           :    Shaun Murray</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="FoO-Sf-fAy">
+                                        <rect key="frame" x="535" y="484" width="397" height="98"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">    3:13 Productions
+
+    E-mail:     WakeMDTech@gmail.com
+    Website:                         wake-md.com  </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N2q-nj-Age"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="about" destination="J6s-KR-Ytm" id="gJr-Tv-GB5"/>
+                        <outlet property="aboutbutton" destination="76h-zu-zid" id="vig-wU-sFT"/>
+                        <outlet property="backbutton" destination="mHa-Bo-bUo" id="lZ4-Ae-m3Y"/>
+                        <outlet property="hopwtousebut" destination="Zo7-RY-b50" id="EO8-IA-72z"/>
+                        <outlet property="howtouseview" destination="WoZ-lE-qnq" id="wP6-iW-ADg"/>
+                        <outlet property="termsandconditionsbut" destination="yJp-CD-pTP" id="uCS-lq-8kM"/>
+                        <outlet property="termsview" destination="YQ5-Bh-jJu" id="h3t-6Z-h1K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2x-cF-Fmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502" y="520"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RzC-K7-IQg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="64O-ui-dcw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="K8A-Je-0nQ">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-150" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf9-7g-pWi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nEF-0K-FLa">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="gL0-Ic-ucU" kind="relationship" relationship="rootViewController" id="8Bg-Gq-2A3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gy6-wb-qhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="-290"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qce-5O-heh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IQ2-8F-V3b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Fullcatalog_off1.png" selectedImage="Fullcatalog_off.png" id="WLJ-kT-IaB">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="150" vertical="2"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y2h-4a-WE2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hWF-7L-c4Y" kind="relationship" relationship="rootViewController" id="jCe-Bx-Lvu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akw-sP-jr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="642"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JkA-Pk-2vW">
+            <objects>
+                <viewController id="k5S-LU-7mT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iFt-qU-Fk1"/>
+                        <viewControllerLayoutGuide type="bottom" id="dDT-nt-m9r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xxg-l6-QBR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGV-SH-Koj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_bb_Fullcatalog off.png" width="1365" height="128"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_bb_Fullcatalog on.png" width="1365" height="128"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_bb_Mylibrary off.png" width="1365" height="128"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_bb_Mylibrary on.png" width="1365" height="128"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_deselected list item bg.png" width="1093" height="330"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_nav_bar.png" width="2732" height="118"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_navbar_settings.png" width="54" height="54"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_navbar_sharebtn.png" width="54" height="54"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_selected list item bg.png" width="1093" height="330"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_video_back off.png" width="100" height="70"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_video_backward off.png" width="100" height="70"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_video_forward off.png" width="100" height="70"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_video_next off.png" width="100" height="70"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_video_play btn.png" width="288" height="288"/>
+        <image name="002 2732x2048_WakeMDiPad_MyLibrary_videotop title bar.png" width="1631" height="165"/>
+        <image name="002 2732x2048_WakeMDiPad_Video top title bar icon.png" width="70" height="70"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog video list icon.png" width="70" height="70"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_Shaunsaysblock.png" width="1631" height="424"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_arrow 1.png" width="64" height="64"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png" width="64" height="64"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_navbar_refresh btn.png" width="54" height="54"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_price tag.png" width="264" height="70"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_selected list item bg.png" width="1093" height="330"/>
+        <image name="004 2732x2048_WakeMDiPad_Mycatalog_vertical split line.png" width="8" height="1736"/>
+        <image name="006 2732x2048_WakeMDiPad_Mycatalog_Videoplayer_navbar_backbtn.png" width="54" height="54"/>
+        <image name="007 2732x2048_WakeMDiPad_HTU_abwnd_tab_btn off.png" width="884" height="176"/>
+        <image name="007 2732x2048_WakeMDiPad_HTU_htu_tab_btn on.png" width="884" height="176"/>
+        <image name="007 2732x2048_WakeMDiPad_HTU_right image.png" width="1614" height="1628"/>
+        <image name="007 2732x2048_WakeMDiPad_HTU_tnc_tab_btn off.png" width="884" height="176"/>
+        <image name="007 2732x2048_WakeMDiPad_HTU_toptabsbottomline.png" width="2732" height="25"/>
+        <image name="008 2732x2048_WakeMDiPad_TNC_navbar_homebtn.png" width="54" height="54"/>
+        <image name="008 2732x2048_WakeMDiPad_TNC_navbar_sharebtn.png" width="54" height="54"/>
+        <image name="009 2732x2048_WakeMDiPad_AbWMD_abwnd_backimage.png" width="2732" height="1628"/>
+        <image name="Fullcatalog_off.png" width="1365" height="128"/>
+        <image name="Fullcatalog_off1.png" width="480" height="45"/>
+        <image name="Shaun.png" width="374" height="296"/>
+    </resources>
+</document>
