@@ -41,14 +41,14 @@
         
         if (iOSScreenSize.width==1024) //7.9 inch
         {
-            [NSThread sleepForTimeInterval:5];
+            [NSThread sleepForTimeInterval:4];
             storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
         }
         
         
         if(iOSScreenSize.width==1366)//12.7 inch
         {
-            [NSThread sleepForTimeInterval:5];
+            [NSThread sleepForTimeInterval:4];
             storyboard=[UIStoryboard storyboardWithName:@"iPad 12.9 inchPro" bundle:nil];
         }
         

@@ -225,14 +225,12 @@
     
     
     
-//        if (indexPath.row>2)
-//        {
-//            cell.arrowImg.image = [UIImage imageNamed:@"011 1242x2208_WakeMD_Catalog defaultdownloaded.png"];
-//        }
-//        else
-//        {
-//            cell.arrowImg.image = [UIImage imageNamed:@"011 1242x2208_WakeMD_Catalog price tag.png"];
-//        }
+        if ( indexPath.row>1) {
+            cell.arrowImg.image = [UIImage imageNamed:@"004 2732x2048_WakeMDiPad_Mycatalog_arrow 3.png"];
+            
+        }else {
+            cell.arrowImg.image = [UIImage imageNamed:@"004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png"];
+        }
     return cell;
 }
     else if( tableView == self.DetailsTableView){
@@ -245,6 +243,12 @@
         }
         dCell.VidName.text = [NSString stringWithFormat:@"%@",[self.CArray objectAtIndex:indexPath.row]];
         dCell.VidDue.text = [NSString stringWithFormat:@"%@",[self.cDueArray objectAtIndex:indexPath.row]];
+        if ( self.Index>1) {
+            dCell.vidImg.image = [UIImage imageNamed:@"004 2732x2048_WakeMDiPad_Mycatalog_arrow 3.png"];
+            
+        }else {
+            dCell.vidImg.image = [UIImage imageNamed:@"004 2732x2048_WakeMDiPad_Mycatalog_arrow 2.png"];
+        }
         
         return dCell;
     }else{return nil;}
@@ -269,8 +273,52 @@
         [self playvideo:self.CArray[indexPath.row]];
     }
     
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        int index = indexPath.row;
+        if (index>1) {
+            
+        
+        [Paktitlearray removeObjectAtIndex:index];
+        [Videoimagesarray removeObjectAtIndex:index];
+        [Lessonsarray removeObjectAtIndex:index];
+        [videodurationarr removeObjectAtIndex:index];
+        [Videonamesarray removeObjectAtIndex:index];
+        
+        [[NSUserDefaults standardUserDefaults]setObject:Videoimagesarray forKey:@"VImages"];
+        [[NSUserDefaults standardUserDefaults]setObject:Paktitlearray forKey:@"PackTitle"];
+        [[NSUserDefaults standardUserDefaults]setObject:Lessonsarray forKey:@"LessonsA"];
+        [[NSUserDefaults standardUserDefaults]setObject:videodurationarr forKey:@"VDue"];
+        [[NSUserDefaults standardUserDefaults]setObject:Videonamesarray forKey:@"VNames"];
+        
+        [self.savedPacks removeObjectAtIndex:index];
+        
+        //[[NSUserDefaults standardUserDefaults]integerForKey:@"index"];
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"index"];
+        [[NSUserDefaults standardUserDefaults]setObject:self.savedPacks forKey:@"savedPaks"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+            
+            self.Index = [self.savedPacks[0] intValue];
+            if (self.CArray!=NULL) {
+                self.CArray = NULL;
+                self.cDueArray = NULL;
+                self.CArray = [[NSArray alloc]initWithArray:self.mainArray [self.Index]];
+                self.cDueArray= [[NSMutableArray alloc]initWithArray:self.VidDueArray [self.Index]];
+            }
+            [DetailsTableView reloadData];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        }else{
+            UIAlertView *al =[[UIAlertView alloc]initWithTitle:@"Wake MD" message:@"Cannot delete this sampler pak" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+            [al show];
+            [myLibTableView reloadData];
+        }
+        
+    }
 }
 - (IBAction)VideoBackBtn:(id)sender {
     mpPlayer.stop;

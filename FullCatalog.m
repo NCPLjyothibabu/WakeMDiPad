@@ -41,6 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   // self.count= -1;
     [self gettingRequiredData];
     _DetailsTableView.delegate = self;
     _DetailsTableView.dataSource =self;
@@ -171,8 +172,11 @@
 }
 
 - (IBAction)downloadOrPurchase:(id)sender {
-    if ([self.Plist[self.index] isEqualToString:@"free"]||[self.Plist[self.index] isEqualToString:@"yes"]) {
+    //if (self.count != -1) {
         
+    
+    if ([self.Plist[self.index] isEqualToString:@"free"]||[self.Plist[self.index] isEqualToString:@"yes"]) {
+    
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Wake MD"
                                                                  delegate:self
                                                         cancelButtonTitle:nil
@@ -193,6 +197,10 @@
         [self paymentinapppurchase];
         
     }
+//    }else{
+//        UIAlertView *al =[[UIAlertView alloc]initWithTitle:@"Wake MD" message:@"Please wait untill download of pak is completed" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+//        [al show];
+//    }
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -496,6 +504,7 @@
                                                                                [self showAlert:@"Download completed"];
                                                                                
                                                                                [[NSUserDefaults standardUserDefaults]setInteger:self.index forKey:@"index"];
+                                                                              // self.index = -1;
                                                                                // });
                                                                            }else{
                                                                                NSLog(@"completed downloads : %dform total:%lu ",self.count,(unsigned long)Name.count);
